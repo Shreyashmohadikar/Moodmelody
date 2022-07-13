@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mood Detection</title>
+        <link rel="stylesheet" href="/static/capture_style.css">
+    </head>
+    <body>
+        {% if final_output %}
+        <div class="header">
+
+            <div class="inner-header flex">
+                <h1>Looks like you are {{final_output}}</h1>
+                <h1>Here's some music for you </h1>
+                <h3><a href="/songs/{{final_output}}">
+                    <button class="custom-btn btn-2">Click here!</button>
+                </a><h3>
+
+            </div>
+            
+            <!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+                </svg>
+            </div>
+        </div>
+        {% endif %}
+    </body>
+</html>
