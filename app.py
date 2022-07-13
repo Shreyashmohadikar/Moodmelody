@@ -1,8 +1,6 @@
 from __future__ import division, print_function
-#import sys
 import os
 import cv2
-#import re
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
