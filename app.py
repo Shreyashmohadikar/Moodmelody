@@ -1,12 +1,15 @@
 from __future__ import division, print_function
+#import sys
+import os
 import cv2
+#import re
 import numpy as np
-import warnings
-warnings.filterwarnings("ignore")
-from keras.models import load_model
 import tensorflow as tf
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing import image
+from flask import Flask, request, render_template
+from werkzeug.utils import secure_filename
 import statistics as st
-from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -99,6 +102,6 @@ def songsSurprise():
 
 
 if __name__ == "__main__":
-    app.run(debug=False,host='0.0.0.0')
+    app.run(debug=True, use_debugger=False, use_reloader=False)
 
     
