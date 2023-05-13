@@ -42,5 +42,5 @@ termcolor==2.3.0
 tf-estimator-nightly==2.8.0.dev2021122109
 typing_extensions==4.5.0
 urllib3==1.26.15
-Werkzeug==2.3.4
+Werkzeug==2.2.3
 wrapt==1.15.0
